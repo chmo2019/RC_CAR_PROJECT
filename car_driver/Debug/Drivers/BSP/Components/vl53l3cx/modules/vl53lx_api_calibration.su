@@ -1,0 +1,8 @@
+vl53lx_api_calibration.c:50:14:VL53LX_run_ref_spad_char	64	static
+vl53lx_api_calibration.c:214:14:VL53LX_get_and_avg_xtalk_samples	48	static
+vl53lx_api_calibration.c:483:14:VL53LX_run_phasecal_average	48	static
+vl53lx_api_calibration.c:613:14:VL53LX_run_device_test	32	static
+vl53lx_api_calibration.c:696:6:VL53LX_hist_xtalk_extract_data_init	24	static
+vl53lx_api_calibration.c:723:14:VL53LX_hist_xtalk_extract_update	32	static
+vl53lx_api_calibration.c:755:14:VL53LX_hist_xtalk_extract_fini	32	static
+vl53lx_api_calibration.c:833:16:VL53LX_run_hist_xtalk_extraction	112	static

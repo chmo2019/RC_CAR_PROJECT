@@ -1,0 +1,12 @@
+vl53lx_hist_algos_gen3.c:50:6:VL53LX_f_003	24	static
+vl53lx_hist_algos_gen3.c:102:14:VL53LX_f_006	64	static
+vl53lx_hist_algos_gen3.c:204:14:VL53LX_f_007	24	static
+vl53lx_hist_algos_gen3.c:242:14:VL53LX_f_008	24	static
+vl53lx_hist_algos_gen3.c:292:14:VL53LX_f_009	32	static
+vl53lx_hist_algos_gen3.c:385:14:VL53LX_f_016	72	static
+vl53lx_hist_algos_gen3.c:464:14:VL53LX_f_010	32	static
+vl53lx_hist_algos_gen3.c:502:14:VL53LX_f_015	64	static
+vl53lx_hist_algos_gen3.c:580:14:VL53LX_f_020	112	static
+vl53lx_hist_algos_gen3.c:647:14:VL53LX_f_011	32	static
+vl53lx_hist_algos_gen3.c:690:14:VL53LX_f_014	112	static
+vl53lx_hist_algos_gen3.c:781:6:VL53LX_f_017	24	static

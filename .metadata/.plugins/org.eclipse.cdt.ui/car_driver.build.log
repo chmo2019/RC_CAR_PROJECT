@@ -1,0 +1,55 @@
+19:38:51 **** Incremental Build of configuration Debug for project car_driver ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F401xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../Drivers/BSP/Components/vl53l5cx/modules -I../Drivers/BSP/Components/vl53l5cx/porting -I../Drivers/BSP/Components/vl53l5cx -I../TOF/Target -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:158:12: warning: unused variable 'bufSize' [-Wunused-variable]
+  158 |   uint16_t bufSize = 8 * sizeof(uint8_t); // buffer size
+      |            ^~~~~~~
+../Core/Src/main.c: In function 'parseString':
+../Core/Src/main.c:519:4: warning: implicit declaration of function 'sprintf' [-Wimplicit-function-declaration]
+  519 |    sprintf(buf, "%d,%d,%d\n\r", currData[0],
+      |    ^~~~~~~
+../Core/Src/main.c:519:4: warning: incompatible implicit declaration of built-in function 'sprintf'
+../Core/Src/main.c:26:1: note: include '<stdio.h>' or provide a declaration of 'sprintf'
+   25 | #include "custom_tof_conf.h"
+  +++ |+#include <stdio.h>
+   26 | 
+../Core/Src/main.c:521:31: warning: pointer targets in passing argument 2 of 'HAL_UART_Transmit' differ in signedness [-Wpointer-sign]
+  521 |    HAL_UART_Transmit(&huart2, buf,
+      |                               ^~~
+      |                               |
+      |                               char *
+In file included from ../Core/Inc/stm32f4xx_hal_conf.h:407,
+                 from ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:30,
+                 from ../Core/Inc/main.h:30,
+                 from ../Core/Src/main.c:20:
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h:723:73: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'char *'
+  723 | HAL_StatusTypeDef HAL_UART_Transmit(UART_HandleTypeDef *huart, uint8_t *pData, uint16_t Size, uint32_t Timeout);
+      |                                                                ~~~~~~~~~^~~~~
+../Core/Src/main.c: In function 'initSensor':
+../Core/Src/main.c:586:3: warning: implicit declaration of function 'printf' [-Wimplicit-function-declaration]
+  586 |   printf("VL53L5CXV0 not detected at requested address (0x%x)\n", conf->platform.address);
+      |   ^~~~~~
+../Core/Src/main.c:586:3: warning: incompatible implicit declaration of built-in function 'printf'
+../Core/Src/main.c:586:3: note: include '<stdio.h>' or provide a declaration of 'printf'
+../Core/Src/main.c:589:2: warning: incompatible implicit declaration of built-in function 'printf'
+  589 |  printf("Sensor initializing, please wait few seconds\n");
+      |  ^~~~~~
+../Core/Src/main.c:589:2: note: include '<stdio.h>' or provide a declaration of 'printf'
+arm-none-eabi-gcc -o "car_driver.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\mocha\STM32CubeIDE\RC_CAR_PROJECT\car_driver\STM32F401RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="car_driver.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: car_driver.elf
+ 
+arm-none-eabi-size   car_driver.elf 
+arm-none-eabi-objdump -h -S  car_driver.elf  > "car_driver.list"
+arm-none-eabi-objcopy  -O binary  car_driver.elf  "car_driver.bin"
+   text	   data	    bss	    dec	    hex	filename
+ 118096	    120	   1968	 120184	  1d578	car_driver.elf
+Finished building: default.size.stdout
+ 
+Finished building: car_driver.bin
+ 
+Finished building: car_driver.list
+ 
+
+19:38:52 Build Finished. 0 errors, 7 warnings. (took 1s.146ms)
+

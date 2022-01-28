@@ -1,0 +1,15 @@
+main.c:100:5:main	3544	static
+main.c:242:6:SystemClock_Config	88	static
+main.c:287:13:MX_TIM3_Init	48	static
+main.c:336:13:MX_TIM4_Init	48	static
+main.c:385:13:MX_USART1_UART_Init	8	static
+main.c:418:13:MX_USART2_UART_Init	8	static
+main.c:451:13:MX_GPIO_Init	48	static
+main.c:501:5:CheckSum	24	static
+main.c:510:6:parseString	64	static
+main.c:528:6:changeAngle	24	static
+main.c:535:6:changeSpeed	24	static
+main.c:552:5:searchKeyword	32	static
+main.c:570:9:initSensor	24	static
+main.c:596:6:U16_2_U8	24	static
+main.c:607:6:Error_Handler	4	static,ignoring_inline_asm
